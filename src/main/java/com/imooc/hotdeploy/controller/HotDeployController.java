@@ -16,4 +16,10 @@ public class HotDeployController {
         request.setAttribute("say", "Hello imooc!");
         return "imooc";
     }
+
+    @GetMapping(value = "/err")
+    public String err() {
+        int i = 10 / 0;
+        return "imooc";
+    }
 }
